@@ -15,7 +15,7 @@ class UserModels():
         self.task = task
         self.worktime = worktime
         self.breaktime = breaktime
-        self.time = datetime.now().strftime("%H:%M")
+        self.time = datetime.datetime.now().strftime("%H:%M")
         
 
     def save_user(self):
