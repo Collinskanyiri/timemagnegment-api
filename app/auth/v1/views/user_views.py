@@ -1,3 +1,4 @@
+import datetime
 from app.auth.v1.models.user_models import UserModels
 from flask import request
 from flask_restful import Resource
@@ -39,7 +40,7 @@ class User(Resource):
         breaktime = args["breaktime"]
         
 
-        newUser = UserModels(username,password,task,worktime,breaktime)
+        newUser = UserModels(username,password,task,worktime,breaktime,datetime)
         newUser.save_user()
 
         return {
